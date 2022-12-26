@@ -197,8 +197,18 @@
         </div>
         <!-- /.topContWrap-->
         <!-- #background -->
-        <div id="background">
-            <iframe id="video" width="560" height="315" src="https://www.youtube.com/embed/AfWZmAXbSpQ?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+         <div id="background">
+            <video id="video" loop>
+                <script type="text/javascript">
+                    clipSource = `https://deliorix.cc/assets/videos/${extra.getRandomIntInclusive(1, 14)}.mp4`;
+                    const video = document.getElementById('video');
+
+                    video.setAttribute('src', clipSource);
+                    video.setAttribute('type', 'video/mp4');
+                    extra.videoElement = video;
+                    extra.videoElement.volume = 0;
+                </script>
+            </video>
         </div>
         <!-- /#background -->
     </div>
